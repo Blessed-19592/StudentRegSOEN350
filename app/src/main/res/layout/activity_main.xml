@@ -14,5 +14,35 @@
         android:orientation="vertical"
         android:padding="16dp">
 
+        <RadioGroup
+            android:id="@+id/rgGender"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Email address"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/etRegNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Registration number"
+            android:inputType="textCapCharacters"
+            android:text="Name" />
+
+        <EditText
+            android:id="@+id/etStudentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint=" Student name"
+            android:inputType="textPersonName"
+            android:text="Name" />
     </LinearLayout>
 </ScrollView>
