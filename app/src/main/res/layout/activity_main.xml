@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/Main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -15,9 +15,67 @@
         android:padding="16dp">
 
         <RadioGroup
+            android:id="@+id/rgStudyMode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RadioButton
+                android:id="@+id/rbFullTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RadioButton"
+                tools:text="Full-time" />
+
+            <RadioButton
+                android:id="@+id/rbPartTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RadioButton"
+                tools:text="Part-time" />
+
+            <RadioButton
+                android:id="@+id/rbDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RadioButton"
+                tools:text="Distance learning" />
+        </RadioGroup>
+
+        <Spinner
+            android:id="@+id/spnProgramme"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:entries="@array/programmes" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gender" />
+
+        <RadioGroup
             android:id="@+id/rgGender"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent" >
+
+            <RadioButton
+                android:id="@+id/rbMale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/rbFemale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Female" />
+
+            <RadioButton
+                android:id="@+id/P"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prefer not to say" />
+        </RadioGroup>
 
         <EditText
             android:id="@+id/etEmail"
