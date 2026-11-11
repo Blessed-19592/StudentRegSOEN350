@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/Main"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -14,32 +14,72 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <RadioGroup
-            android:id="@+id/rgStudyMode"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Student Registration"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etStudentName"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="wrap_content"
+            android:hint="Student name"
+            android:inputType="textPersonName|textCapWords" />
+
+        <EditText
+            android:id="@+id/etRegNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Registration number"
+            android:inputType="textCapCharacters" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email address"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Gender"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rgGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/rbFullTime"
-                android:layout_width="match_parent"
+                android:id="@+id/rbMale"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="RadioButton"
-                tools:text="Full-time" />
+                android:text="Male" />
 
             <RadioButton
-                android:id="@+id/rbPartTime"
-                android:layout_width="match_parent"
+                android:id="@+id/rbFemale"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="RadioButton"
-                tools:text="Part-time" />
+                android:text="Female" />
 
             <RadioButton
-                android:id="@+id/rbDistance"
-                android:layout_width="match_parent"
+                android:id="@+id/rbOther"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="RadioButton"
-                tools:text="Distance learning" />
+                android:text="Prefer not to say" />
         </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Study programme"
+            android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/spnProgramme"
@@ -48,59 +88,50 @@
             android:entries="@array/programmes" />
 
         <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gender" />
+            android:layout_marginTop="16dp"
+            android:text="Study mode"
+            android:textStyle="bold" />
 
         <RadioGroup
-            android:id="@+id/rgGender"
+            android:id="@+id/rgStudyMode"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/rbMale"
-                android:layout_width="match_parent"
+                android:id="@+id/rbFullTime"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Male" />
+                android:text="Full-time" />
 
             <RadioButton
-                android:id="@+id/rbFemale"
-                android:layout_width="match_parent"
+                android:id="@+id/rbPartTime"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Female" />
+                android:text="Part-time" />
 
             <RadioButton
-                android:id="@+id/P"
-                android:layout_width="match_parent"
+                android:id="@+id/rbDistance"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Prefer not to say" />
+                android:text="Distance learning" />
         </RadioGroup>
 
-        <EditText
-            android:id="@+id/etEmail"
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swNotifications"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Email address"
-            android:inputType="textEmailAddress" />
+            android:layout_marginTop="16dp"
+            android:checked="true"
+            android:text="Receive notifications" />
 
-        <EditText
-            android:id="@+id/etRegNumber"
+        <Button
+            android:id="@+id/btnSubmit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Registration number"
-            android:inputType="textCapCharacters"
-            android:text="Name" />
+            android:layout_marginTop="24dp"
+            android:text="Submit" />
 
-        <EditText
-            android:id="@+id/etStudentName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint=" Student name"
-            android:inputType="textPersonName"
-            android:text="Name" />
     </LinearLayout>
 </ScrollView>
